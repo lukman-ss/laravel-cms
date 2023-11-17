@@ -51,19 +51,19 @@ License: For each use you must have a valid license purchased only from above li
 			<!--begin::Page-->
 			<div class="page d-flex flex-row flex-column-fluid">
                 {{-- sidebars --}}
-                @yield('sidebar')
+                <livewire:partials.sidebar :sidebar="$sidebar" :active_main_link="$active_main_link" :active_sub_link="$active_sub_link" />
+                
 				<!--begin::Wrapper-->
 				<div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
                     {{-- header --}}
-                    @include('partials.header')
+                    <livewire:partials.header />
                     {{-- content --}}
                     @yield('content')
                     {{-- footer --}}
-                    @include('partials.footer')
-
+                    <livewire:partials.footer />
 				</div>
+                @livewireScripts
 				<!--end::Wrapper-->
-
 			</div>
 			<!--end::Page-->
 		</div>

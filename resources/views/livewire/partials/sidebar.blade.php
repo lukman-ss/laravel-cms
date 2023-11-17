@@ -24,7 +24,7 @@
             <div class="menu menu-column menu-rounded menu-sub-indention menu-active-bg fw-semibold my-auto"
                 id="#kt_aside_menu" data-kt-menu="true">
 
-                @foreach ($links as $link)
+                @foreach ($sidebar as $link)
                 <!--begin:Menu item-->
                 <div data-kt-menu-trigger="click" class="menu-item @if($link['main_link'] === $active_main_link) here show @endif menu-accordion">
                     <!--begin:Menu link-->

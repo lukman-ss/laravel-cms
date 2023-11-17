@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\Login;
 use App\Http\Controllers\Auth\Register;
+// use App\Http\Controllers\Dashboard\Dashboard;
+use App\Http\Livewire\Dashboard\Dashboard;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,10 +30,20 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/dashboard', [Dashboard::class, 'render']);
 
-Auth::routes();
+// Route::get('/spa', function () {
+//     return view('layouts.dashboard');
+// });
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::livewire('/spa/dashboard', [Dashboard::class, 'index'])->layout('layouts.dashboard');
+// Route::get('/dashboard', [Dashboard::class, 'index'])->name('dashboard');
+
+// Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
