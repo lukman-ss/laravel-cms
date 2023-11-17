@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\Login;
 use App\Http\Controllers\Auth\Register;
 // use App\Http\Controllers\Dashboard\Dashboard;
 use App\Http\Livewire\Dashboard\Dashboard;
+use App\Http\Livewire\Post\Index as ListPost;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,6 +33,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 Route::get('/dashboard', [Dashboard::class, 'render']);
+Route::get('/post', [ListPost::class, 'render']);
+
+
 
 // Route::get('/spa', function () {
 //     return view('layouts.dashboard');
