@@ -28,12 +28,12 @@
                 <!--begin:Menu item-->
                 <div data-kt-menu-trigger="click" class="menu-item @if($link['main_link'] === $active_main_link) here show @endif menu-accordion">
                     <!--begin:Menu link-->
-                    @if(isset($link['sub_link']))
+                    @if(isset($link['sub']))
                     <span class="menu-link">
                         <span class="menu-icon">
                             <i class="ki-duotone ki-black-right fs-2"></i>
                         </span>
-                        <span class="menu-title">{{ $link['main_link'] }}</span>
+                        <span class="menu-title">{{ $link['main_alias'] }}</span>
                         <span class="menu-arrow"></span>
                     </span>
                     <!--end:Menu link-->
@@ -43,23 +43,25 @@
                             <span class="menu-icon">
                                 <i class="ki-duotone ki-black-right fs-2"></i>
                             </span>
-                            <span class="menu-title">{{ $link['main_link'] }}</span>
+                            <span class="menu-title">{{ $link['main_alias'] }}</span>
+                            @if(isset($link['sub']))
                             <span class="menu-arrow"></span>
+                            @endif
                         </span>
                     </a>
                     @endif
-                    @if(isset($link['sub_link']))
-                    @foreach ($link['sub_link'] as $sub_link)
+                    @if(isset($link['sub']))
+                    @foreach ($link['sub'] as $sub_link)
                     <!--begin:Menu sub-->
                     <div class="menu-sub menu-sub-accordion">
                         <!--begin:Menu item-->
                         <div class="menu-item">
                             <!--begin:Menu link-->
-                            <a class="menu-link @if($sub_link === $active_sub_link) active @endif" href="{{ url($link['main_link'] . '/' . $sub_link) }}">
+                            <a class="menu-link @if($sub_link['sub_link'] === $active_sub_link) active @endif" href="{{ url($link['main_link'] . $sub_link['sub_link']) }}">
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
-                                <span class="menu-title">{{ $sub_link }}</span>
+                                <span class="menu-title">{{ $sub_link['sub_alias'] }}</span>
                             </a>
                             <!--end:Menu link-->
                         </div>

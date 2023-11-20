@@ -1,9 +1,11 @@
 <div class="table-responsive table-loading">
-	<div class="table-loading-message">
-		Loading...
-	</div>
+    @if($isLoading)
+        <div wire:loading.delay>
 
-	<table class="table table-row-bordered gy-5">
+            <livewire:component.loading />
+        </div>
+    @else
+	<table wire:loading.remove class="table table-row-bordered gy-5">
 		<thead>
 			<tr class="fw-bold fs-6 text-gray-800">
                 @foreach ($aliases as $alias)
@@ -23,4 +25,5 @@
             @endforeach
 		</tbody>
 	</table>
+    @endif
 </div>

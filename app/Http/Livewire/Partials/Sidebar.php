@@ -11,7 +11,7 @@ class Sidebar extends Component
     public $active_sub_link;
     public function render()
     {
-   
+        
         return view('livewire.partials.sidebar');
     }
 }

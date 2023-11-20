@@ -1,0 +1,3 @@
+<div wire:loading class="table-loading-message" >
+    Loading...
+</div>
