@@ -13,6 +13,7 @@ class Index extends Component
     public function mount()
     {
         $this->loadPosts();
+        $this->sidebar = view()->shared('sidebar');
     }
 
     public function loadPosts()
@@ -25,10 +26,6 @@ class Index extends Component
     }
     public function render()
     {
-        $data['sidebar'] = [
-            ['main_link' => 'test','sub_link' => ['test', 'test2']],
-            ['main_link' => 'dashboard','sub_link' => ['test', 'test2']],
-        ];
         $data['active_main_link'] = 'dashboard';
         $data['active_sub_link'] = 'test';
 
