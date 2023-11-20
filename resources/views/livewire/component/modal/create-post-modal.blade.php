@@ -14,11 +14,9 @@
                 </div>
                 <!--end::Close-->
             </div>
-
             <div class="modal-body">
-                <p>Modal body text goes here.</p>
+                <livewire:component.form.create-post-form />
             </div>
-
             <div class="modal-footer">
                 <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary">Save changes</button>

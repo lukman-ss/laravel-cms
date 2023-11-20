@@ -1,6 +1,6 @@
 <div class="{{ $class_div }}">
     <!--begin::Label-->
-    <label class="form-label mb-3">{{ $label }}</label>
+    <label class="{{ $class_label }}">{{ $label }}</label>
     <!--end::Label-->
     <!--begin::Input-->
     <input type="{{ $type }}" class="{{ $class_input }}" name="{{ $name }}" id="{{ $name }}"
