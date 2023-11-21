@@ -23,7 +23,8 @@
             <!--begin::Body-->
             <div class="card-body py-3">
                 {{-- @if (!empty($list) && isset($isLoading)) --}}
-                    <livewire:content.table :datas="($list)" :headers="['post_title']" :aliases="['Judul']" :isLoading="$isLoading"  />
+                <livewire:component.form.create-post-form />
+                <livewire:content.table :datas="($list)" :headers="['post_title']" :aliases="['Judul']" :isLoading="$isLoading"  />
                 {{-- @endif --}}
             </div>
             <!--begin::Body-->

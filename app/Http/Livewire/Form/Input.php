@@ -7,6 +7,7 @@ use Livewire\Component;
 class Input extends Component
 {
     public $class_div;
+    public $class_label;
     public $label;
     public $type;
     public $class_input;

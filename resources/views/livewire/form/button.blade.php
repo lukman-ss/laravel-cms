@@ -1,3 +1,10 @@
 <div>
-    {{-- The best athlete wants his opponent at his best. --}}
+    <button type="{{ $type }}" class="{{ $button_class }}" 
+    @if ($isModal)
+        data-bs-toggle="modal" 
+        data-bs-target="#{{ $modal_id }}"
+    @endif  >
+        {{ $title }}
+    </button>
 </div>
+
