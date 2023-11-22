@@ -1,5 +1,9 @@
-<div>
-    <div id="kt_docs_quill_basic" name="kt_docs_quill_basic"></div>
+<div class="{{ $class_div }}">
+    <label class="{{ $class_label }}">{{ $label }}</label>
+    <div id="kt_docs_quill_basic" name="{{ $name }}"></div>
+    @error($name)
+        <span class="text-red-500">{{ $message }}</span>
+    @enderror
     @push('scripts')
         <script>
             var quill = new Quill('#kt_docs_quill_basic', {
